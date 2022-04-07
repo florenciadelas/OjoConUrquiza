@@ -1,0 +1,411 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    }
+
+ body{ 
+    background-color: black;
+    color: white;
+    }
+
+ header{
+    background-color: whitesmoke;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    } 
+ 
+ul li a{
+    text-decoration:none;
+    list-style-type: none;
+    color: black;
+    font-size: 150%;       
+    }
+
+ul li{
+    display: inline-block;
+    margin: 10px;
+}    
+
+/*Contenido*/   
+
+.centrar{
+    text-align: center;
+}
+
+.estiloTitulo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.estiloTitulo h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 70px;
+    color: white;  
+}
+
+.estiloSub{
+    font-size: 180%;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: white;
+    margin: 20px 0px;
+    text-decoration: underline rgb(250, 250, 121);
+}
+
+.fotosIndex{
+    height: 85%;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0px 60px;
+}
+
+.videoProfes{
+    width: 280%;
+    height: 85%;
+    margin: 10px 40px;
+}
+
+.parrafoIndex{  
+    width: 90%;
+    font-size: 120%; 
+    text-align: justify;
+    line-height: 30px;
+    color: rgb(185, 181, 181);
+}
+
+.estiloFotoFondo{
+   background-size: cover;
+   background-position: center;
+   width: 80%;
+   margin-left: 10%;
+   margin-top: 4%;
+   height: 450px;
+   border-radius: 10px;
+}
+
+
+.fotoFondo1{
+   background-image: url(../images/gitanos.jpg); 
+}
+
+.fotoFondo2{
+    background-image: url(../images/elFarruquito.jpg); 
+ }
+
+ .fotoFondo3{
+    background-image: url(../images/fotoEvaYerbabuena.jpg);
+    background-position: top;
+ }
+
+.tamanioTexto{ /*Solo para practicar, pero despues voy a ajustar el texto para que no tenga que scrollear*/
+    width: 100%;
+    height: 60%;
+    overflow: auto;
+    padding-right: 2%;
+    text-align: justify;
+    position: relative;
+    color: white;
+}
+.fondoTexto{
+    background-color: rgba(102, 102, 116, 0.938) ;
+    width: 35%;
+    height: 60%;
+    position: relative;
+    left: 700px;
+    top: 60px;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+
+.galeria{
+    display: inline-block;
+    width: 330px;
+    height: 280px;
+    margin: 0px 10px;
+    padding: 10px;
+}
+
+.seleccionModelo{
+    width: 50%;
+    height: 190px;
+    line-height: 45px;
+    margin: 30px 350px;
+    font-size: 20px;
+}
+
+.desplegable{
+    font-size: 20px;
+}
+
+.formInfo label{
+    display: block;
+}
+.formInfo input{
+    display: block;
+}
+.formInfo{
+    line-height: 30px;
+    background-color: rgb(163, 159, 148);
+    margin: 20px 200px;
+    padding-left: 450px;
+    font-size: 20px;
+}
+
+.botones input{
+    display: inline;
+    position: relative;
+}
+
+.checkbox input{
+    display: inline;
+}
+.checkbox{
+    font-size: 13px;
+}
+
+/*Grids*/
+
+.grillaIndex{
+    display: grid;
+    grid-template-columns: 50px auto auto;
+    grid-template-rows: 50px 110px 500px 500px auto;
+    grid-template-areas: 
+    "bailar nav nav"
+    "bailar titulo titulo"
+    "bailar articuloSuperior articuloSuperior"
+    "bailar articuloInferior articuloInferior"
+    "bailar footer footer"
+    ;
+}
+
+.menu{
+    grid-area: nav;
+}
+
+.titulo{
+    grid-area: titulo;
+}
+.bailar{
+    grid-area: bailar;
+    background-color: rgb(250, 250, 121);
+    color: black;
+}
+
+.articuloSuperior {
+    grid-area: articuloSuperior; 
+    display: flex;
+    align-items: center;
+}
+
+.articuloSuperior div{
+   display: flex;
+   justify-items: center;
+   align-items: flex-start;
+}
+
+.articuloInferior{
+    grid-area: articuloInferior; 
+    display: flex;
+    align-items: center;
+}
+.articuloInferior div{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.textoIndex{ 
+   flex-direction: column;
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    color: black;
+    background-color: whitesmoke;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 7px; 
+    font-size: 90%;   
+}
+
+.redes a{
+    text-decoration:none;
+    color: black;
+    font-size: 200%;
+    line-height: 50px;
+    justify-content: center;
+}
+
+/*Medida Tablet*/
+
+@media screen and (max-width: 768px){
+    .grillaIndex{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 30px 90px 405px 405px auto;
+        grid-template-areas: 
+        "nav nav"
+        "titulo titulo"
+        "articuloSuperior articuloSuperior"
+        "articuloInferior articuloInferior"
+        "footer footer"
+    }   
+
+    ul li a{
+        font-size: 100%;   
+        justify-content: center;   
+    }
+
+    ul li{
+        margin: 5px 10px;
+    } 
+    .estiloTitulo{
+        display: flex;
+        align-items: flex-end   ;
+    }
+    
+    .estiloTitulo h1{
+        font-size: 50px;
+          text-decoration: underline rgb(250, 250, 121);
+    }
+
+    .estiloSub{
+        font-size: 100%;
+        font-family: 'Ubuntu Condensed', sans-serif;
+        color: white;
+        margin: 10px 0px;
+    }
+
+    .fotosIndex{
+        height: 70%;
+        border-radius: 10px;
+        margin: 0px 30px;
+    }
+
+    .parrafoIndex{ 
+        width: 90%;
+        font-size: 85%; 
+        line-height: 20px;
+       }
+
+    aside{
+        display: none;
+    }
+
+    .footer{
+        height: auto;
+        white-space:auto;
+        padding-top: 7px; 
+        font-size: 60%;   
+    }
+    .ubicacion iframe{
+        width: 160px;
+        height: 70px;
+    }
+    
+    .videoProfes{
+        width: 250%;
+        height: 100%;
+    }
+} 
+
+/*Medida Mobile*/
+
+@media screen and (max-width: 480px){
+    .grillaIndex{
+        grid-template-columns: 1fr;
+        grid-template-rows: 3% 6% 500px 500px auto;
+        grid-template-areas: 
+        "nav"
+        "titulo"
+        "articuloSuperior"
+        "articuloInferior"
+        "footer "
+    }   
+
+    ul li a{
+        font-size: 80%;   
+        justify-content: center;   
+    }
+
+    ul li{
+        margin: 5px 5px;
+    } 
+    .estiloTitulo{
+        display: flex;
+        align-items: center;
+    }
+    
+    .estiloTitulo h1{
+        font-size: 28px;
+        
+    }
+
+    .estiloSub{
+        font-size: 100%;
+        font-family: 'Ubuntu Condensed', sans-serif;
+        color: white;
+        margin: 10px 20px;
+    }
+
+    .fotosIndex{
+        height: 60%;
+        width: 100%;
+        margin: 10px 0px;
+        border-radius: 0px;
+    }
+
+    .parrafoIndex{ 
+        width: 90%;
+        font-size: 85%; 
+        line-height: 15px;
+        margin: 0px 20px;
+       }
+
+    aside{
+        display: none;
+    }
+
+    .footer{
+        height: 90px;
+        gap: 100px;
+        padding-top: 7px; 
+        font-size: 60%;   
+    }
+    .ubicacion iframe{
+        width: 160px;
+        height: 70px;
+    }
+    
+    .videoProfes{
+        width: 100%;
+        height: 70%;
+        margin: 0px;
+    }
+
+    .articuloSuperior{
+        grid-area: articuloSuperior; 
+        flex-direction: column;
+    }
+    
+    .articuloSuperior div{
+       flex-direction: column;
+       padding: 15px 0px;
+    }
+
+    .articuloInferior{
+        grid-area: articuloInferior; 
+        flex-direction: column;
+    }
+
+    .articuloInferior div{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 0px;
+    }
+
+    .textoIndex{ 
+        order: -1;
+    }
+} 
+
