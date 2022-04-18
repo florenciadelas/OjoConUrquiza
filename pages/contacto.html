@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escuela de Flamenco Ojo con Urquiza</title>
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +26,7 @@
 <body>
     <div class="container-fluid">
         <header class="row">
-            <nav class="col-lg-12 col-sm-12 col-xs-1 centrar">
+            <nav class="col-lg-12 col-sm-12 col-xs-1">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -56,15 +58,15 @@
             </nav>
         </header>
 
-        <main class="centrar estiloTitulo borde">
+        <main class="centrar estiloTitulo">
             <h1>Contacto</h1>
         </main>
 
-        <h2 class="estiloSub margenIzquierdo">Dejanos tus datos y te contactamos!</h2>
-        <section>
-            <form class="formInfo">
-                <!--Se agrego transition-->
-                <div>
+        <h2 class="estiloSub">Dejanos tus datos y te contactamos!</h2>
+
+        <section class="row contacto">
+            <form class="formulario col-lg-6 col-sm-8 col-xs-1">
+                <div class="datosContacto">
                     <label for="nombre">Nombre: </label>
                     <input type="name" placeholder="Ingresa tu nombre" name="nombre">
                     <label for="email">Email: </label>
@@ -72,35 +74,43 @@
 
                     <label for="consulta">Consulta: </label>
                     <textarea name="" id="" cols="50" rows="10" placeholder="Consulta"></textarea>
+                </div>
 
-                    <div class="checkbox">
-                        <input type="checkbox" value="1">Quiero recibir informacion por email
-                    </div>
+                <div class="checkbox">
+                    <input type="checkbox" value="1">Quiero recibir informacion por email
+                </div>
 
-                    <div class="botones">
-                        <input type="submit">
-                        <input type="reset" value="Cancelar">
-                    </div>
+                <div class="botones">
+                    <input type="submit">
+                    <input type="reset" value="Cancelar">
                 </div>
             </form>
         </section>
 
 
-        <footer class="infoFinal footer">
-            <!--Se agrego gradiente-->
-            <div class="redes">
-                <h2>Redes sociales</h2>
-                <a href="https://www.facebook.com/ojocon.urquiza" target=”_blank”><i
-                        class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/ojoconurquiza/" target=”_blank”><i
-                        class="fa-brands fa-instagram"></i></a>
+
+        <footer class="row footer">
+            <div class="redes col-lg-4 col-sm-3 col-xs-1">
+                <h4>Redes sociales</h4>
+                <div class="linksRedes">
+                    <a href="https://www.facebook.com/ojocon.urquiza" target=”_blank”><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/ojoconurquiza/" target=”_blank”><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
             </div>
 
-            <div class="ubicacion">
-                <h2>Ubicacion</h2>
+            <div class="ubicacion col-lg-4 col-sm-3 col-xs-1">
+                <h4>Ubicacion</h4>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.1924168943738!2d-58.411077484769805!3d-34.62457748045419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccafd9d3678b9%3A0x4e4f494ecba1ec97!2sAv.%20San%20Juan%20%26%20Gral.%20Urquiza%2C%20C1221%20CABA!5e0!3m2!1ses-419!2sar!4v1647823563888!5m2!1ses-419!2sar"
                     width="250" height="100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="horario col-lg-4 col-sm-3 col-xs-1">
+                <h4>Horarios</h4>
+                <p>De lunes a viernes 18 a 21hs</p>
+                <p>Sabados de 11 a 14hs</p>
             </div>
         </footer>
     </div>
