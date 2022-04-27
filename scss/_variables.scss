@@ -1,2 +1,15 @@
-$tamañoFoto: 45%;
-$colorTitulo: white;
+$estilos: (
+    colorTitulo: white,
+    tamanoFoto: 45%,
+    tamanoParrafo: 120%
+);
+
+@mixin flexbox ($flex, $direction) {
+    display: $flex;
+    flex-direction: $direction;
+}
+
+@mixin alineado ($justify, $aligne) {
+    justify-content: $justify;
+    align-items: $aligne;
+}

@@ -9,15 +9,14 @@
 }
 
 .estiloTitulo {
+    @include alineado (center, center);
     display: flex;
-    justify-content: center;
-    align-content: center;
     margin-top: 20px;
 
     h1 {
         font-family: 'Bebas Neue', cursive;
         font-size: 70px;
-        color: $colorTitulo;
+        color: map-get($estilos, colorTitulo)
     }
 }
 
@@ -25,13 +24,18 @@
     display: flex;
     font-size: 250%;
     font-family: 'Ubuntu Condensed', sans-serif;
-    color: $colorTitulo;
+    color: map-get($estilos, colorTitulo);
     margin: 20px 0px;
     text-decoration: underline rgb(250, 250, 121);
 }
 
+.estiloSub--maja {
+    @extend .estiloSub;
+    font-size: 120%;
+}
+
 .fotosIndex {
-    width: $tamañoFoto;
+    width: map-get($estilos, tamanoFoto);
     border-radius: 10px;
     margin: 40px 60px;
 }
@@ -43,14 +47,14 @@
 
 .parrafoIndex {
     width: 90%;
-    font-size: 120%;
+    font-size: map-get($estilos, tamanoParrafo);
     text-align: justify;
     line-height: 30px;
     color: rgb(185, 181, 181);
 }
 
 .textoIndex {
-    flex-direction: column;
+    @include flexbox (flex, column);
 }
 
 strong {
@@ -63,8 +67,7 @@ strong {
 
 .carousel {
     display: flex;
-    justify-content: space-evenly;
-
+    @include alineado (space-evenly, center);
     img {
         width: 100%;
     }
@@ -77,23 +80,16 @@ strong {
 }
 
 .seleccionModelo {
+    @include alineado (center, center);
     width: 100%;
     height: 250px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     line-height: 30px;
 }
 
 .seleccionColores {
-    display: flex;
-    flex-direction: column;
+    @include flexbox (flex, column);
     margin: 5px;
-}
-
-.titulosMaja {
-    font-size: 120%;
-    text-decoration: underline rgb(250, 250, 121);
 }
 
 .desplegable {
@@ -109,16 +105,14 @@ strong {
 }
 
 .formulario {
-    display: flex;
-    flex-direction: column;
+    @include flexbox (flex, column);
     margin: 10px;
     padding: 20px;
     background-color: rgba(163, 159, 148, 0.466);
 }
 
 .datosContacto {
-    display: flex;
-    flex-direction: column;
+    @include flexbox (flex, column);
 
     input {
         width: 80%;
@@ -140,10 +134,8 @@ textarea {
 }
 
 .botones {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    @include flexbox (flex, row);
+    @include alineado (space-around, center);
 
     input {
         width: 20%;
@@ -176,27 +168,20 @@ textarea {
 }
 */
 
-.articuloSuperior {
+.articuloTexto {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    @include alineado (center, center);
 
     div {
         display: flex;
-        justify-items: center;
-        align-items: flex-start;
+        @include alineado (center, flex-start);
     }
 }
 
-.articuloInferior {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.articuloTexto--inferior {
+    @extend .articuloTexto;
     div {
-        display: flex;
         align-items: flex-end;
-        justify-content: center;
     }
 }
 
@@ -208,11 +193,13 @@ textarea {
     background-image: linear-gradient(to bottom, rgb(250, 240, 240), rgb(158, 150, 150));
 }
 
-.redes {
-    display: flex;
-    flex-direction: column;
+.columnaFooter {
+    @include flexbox (flex, column);
     align-items: center;
+}
 
+.columnaFooter--redes {
+    @extend .columnaFooter;
     a {
         text-decoration: none;
         color: black;
@@ -226,21 +213,8 @@ textarea {
     }
 }
 
-.ubicacion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .linksRedes {
-    display: flex;
-    flex-direction: row;
-}
-
-.horario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexbox (flex, row);
 }
 
 @import "mediaQuerys";
