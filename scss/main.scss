@@ -90,6 +90,12 @@ strong {
 .seleccionColores {
     @include flexbox (flex, column);
     margin: 5px;
+    div{
+        margin-right: 5px;
+    }
+    input {
+        margin-right: 5px;
+    }
 }
 
 .desplegable {
