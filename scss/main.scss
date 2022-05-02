@@ -68,6 +68,7 @@ strong {
 .carousel {
     display: flex;
     @include alineado (space-evenly, center);
+
     img {
         width: 100%;
     }
@@ -90,9 +91,11 @@ strong {
 .seleccionColores {
     @include flexbox (flex, column);
     margin: 5px;
-    div{
+
+    div {
         margin-right: 5px;
     }
+
     input {
         margin-right: 5px;
     }
@@ -186,6 +189,7 @@ textarea {
 
 .articuloTexto--inferior {
     @extend .articuloTexto;
+
     div {
         align-items: flex-end;
     }
@@ -206,6 +210,7 @@ textarea {
 
 .columnaFooter--redes {
     @extend .columnaFooter;
+
     a {
         text-decoration: none;
         color: black;
