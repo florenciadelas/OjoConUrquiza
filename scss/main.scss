@@ -150,7 +150,7 @@ textarea {
         width: 20%;
 
         &:hover {
-            border: solid green;
+            background: rgb(250, 250, 121);
             font-weight: bold;
         }
     }
@@ -165,17 +165,6 @@ textarea {
         width: 20%;
     }
 }
-
-/*.bailar {
-    background-color: rgb(250, 250, 121);
-    color: black;
-    animation-name: titilar;
-    animation-delay: 2s;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-*/
 
 .articuloTexto {
     display: flex;

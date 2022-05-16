@@ -1,8 +1,6 @@
-$estilos: (
-    colorTitulo: white,
+$estilos: (colorTitulo: white,
     tamanoFoto: 45%,
-    tamanoParrafo: 120%
-);
+    tamanoParrafo: 120%);
 
 @mixin flexbox ($flex, $direction) {
     display: $flex;
